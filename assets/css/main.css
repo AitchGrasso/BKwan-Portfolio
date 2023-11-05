@@ -167,6 +167,7 @@ input, select, textarea {
 		font-weight: 600;
 		font-size: 1rem;
 		line-height: 1.65;
+		font-style: italic
 	}
 
 	a {
@@ -3352,6 +3353,15 @@ input, select, textarea {
 		-ms-align-items: -ms-stretch;
 		align-items: stretch;
 		text-align: center;
+		font-style: italic;
+	}
+
+	.test-big{
+		font-size:larger;
+	}
+
+	.test-small{
+		font-size: smaller;
 	}
 
 		.features > * {
