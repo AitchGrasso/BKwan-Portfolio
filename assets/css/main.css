@@ -1,12 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,900,300italic,600italic,900italic");
 
-/*
-	Vortex by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -2952,6 +2946,7 @@ input, select, textarea {
 		header h2 + p {
 			font-size: 1rem;
 			margin-top: -0.6rem;
+			font-weight: ;
 		}
 
 		header h3 + p {
@@ -2996,6 +2991,12 @@ input, select, textarea {
 			padding: 0 0.75rem 0.75rem 0.75rem;
 			text-align: left;
 		}
+		table th:first-child,
+		table td:first-child {
+  			width: 100px; 
+		}
+
+		
 
 		table thead {
 			border-bottom: solid 2px;
@@ -3062,7 +3063,7 @@ input, select, textarea {
 		padding: 12rem 6rem 10rem 6rem ;
 		cursor: default;
 		position: relative;
-		text-align: center;
+		text-align: left;
 	}
 
 		.banner input[type="submit"],
@@ -3072,6 +3073,7 @@ input, select, textarea {
 		.banner .button {
 			color: #ffffff !important;
 			box-shadow: inset 0 0 0 3px #ffffff;
+			text-align: left;
 		}
 
 			.banner input[type="submit"].icon:before,
@@ -3169,7 +3171,8 @@ input, select, textarea {
 		}
 		.banner h5 {
 			font-family: "Source Sans Pro", Helvetica, sans-serif;
-			font-weight: 300;
+			text-transform:none;
+			font-weight: 400;
 		}
 
 			.banner a:hover {
@@ -3249,7 +3252,7 @@ input, select, textarea {
 				transition: transform 2.1875s ease-out, filter 2.1875s ease-out;
 			}
 
-		.banner h1, .banner .actions {
+		.banner h1, .banner h5, .banner .actions {
 			-moz-transition: opacity 0.875s ease-out, -moz-transform 0.875s ease-out, -moz-filter 0.875s ease-out;
 			-webkit-transition: opacity 0.875s ease-out, -webkit-transform 0.875s ease-out, -webkit-filter 0.875s ease-out;
 			-ms-transition: opacity 0.875s ease-out, -ms-transform 0.875s ease-out, -ms-filter 0.875s ease-out;
@@ -3279,7 +3282,7 @@ input, select, textarea {
 			transform: translateX(-1.5rem) scale(1.125);
 		}
 
-		body.is-preload .banner h1, body.is-preload .banner .actions {
+		body.is-preload .banner h5, body.is-preload .banner .actions {
 			-moz-transform: scale(0.985);
 			-webkit-transform: scale(0.985);
 			-ms-transform: scale(0.985);
@@ -3453,6 +3456,17 @@ input, select, textarea {
 			}
 
 		}
+		@media (max-width: 767px) {
+			section.mobile-hide {
+			  display: none; 
+			}
+		}
+
+		@media (min-width: 767px) {
+			.desktop-hide {
+			  display: none; 
+			}
+		  }
 
 	.features > section {
 		border-color: #dde1eb;
@@ -4214,7 +4228,7 @@ input, select, textarea {
 
 				.main > header > :first-child {
 					padding-bottom: 1.5rem;
-					margin-bottom: 1.75rem;
+					margin-bottom: 1rem;
 				}
 
 					.main > header > :first-child:after {

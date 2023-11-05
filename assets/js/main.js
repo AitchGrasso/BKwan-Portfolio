@@ -24,8 +24,31 @@
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
-			}, 100);
+			}, 0);
 		});
+
+		// var options = {
+		// 	root: null, // Use the viewport as the root
+		// 	rootMargin: '0px',
+		// 	threshold: 0.5 // Trigger when 50% of the section is in the viewport
+		//   };
+
+		//   var observer = new IntersectionObserver(function (entries, observer) {
+		// 	entries.forEach(function (entry) {
+		// 	  if (entry.isIntersecting) {
+		// 		// Add a class to start the animation
+		// 		$body.addClass('is-section-visible');
+				
+		// 		// Once the animation is triggered, you may want to disconnect the observer to avoid re-triggering
+		// 		observer.disconnect();
+		// 	  }
+		// 	});
+		//   }, options);
+		
+		//   // Start observing the section
+		//   observer.observe(document.getElementById('animated-section'));
+		// });
+	
 
 	// Tweaks/fixes.
 
