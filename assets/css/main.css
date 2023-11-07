@@ -252,7 +252,7 @@ input, select, textarea {
 		font-size: 4.25rem;
 		line-height: .25;
 		margin: 0 0 1rem 0;
-		font-family: "TT Ramillas Trial Black Decor";
+		font-family: "TT Ramillas Trial Bold Italic", "Source Sans Pro", Helvetica, sans-serif;
 	}
 
 	h2 {
