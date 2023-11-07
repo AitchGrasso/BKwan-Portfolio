@@ -67,7 +67,29 @@ input, select, textarea {
 }
 
 /* Basic */
+@font-face {
+	font-family: "TT Ramillas Trial Medium";  /* Choose a name for your font */
+	src: url('../webfonts/TT Ramillas Trial Medium.ttf') format('truetype'); /* Path to your .ttf file */
+	/* You can also include other font formats (e.g., woff, woff2, eot) for cross-browser compatibility */
+  }
 
+  @font-face {
+	font-family: "TT Ramillas Trial Bold Italic";  /* Choose a name for your font */
+	src: url('../webfonts/TT Ramillas Trial Bold Italic.ttf') format('truetype'); /* Path to your .ttf file */
+	/* You can also include other font formats (e.g., woff, woff2, eot) for cross-browser compatibility */
+  }
+
+  @font-face {
+	font-family: "TT Ramillas Trial Black Decor";  /* Choose a name for your font */
+	src: url('../webfonts/TT Ramillas Trial Black Decor.ttf') format('truetype'); /* Path to your .ttf file */
+	/* You can also include other font formats (e.g., woff, woff2, eot) for cross-browser compatibility */
+  }
+
+  @font-face {
+	font-family: "TT Ramillas Trial Black";  /* Choose a name for your font */
+	src: url('../webfonts/TT Ramillas Trial Black.ttf') format('truetype'); /* Path to your .ttf file */
+	/* You can also include other font formats (e.g., woff, woff2, eot) for cross-browser compatibility */
+  }
 	@-ms-viewport {
 		width: device-width;
 	}
@@ -163,11 +185,13 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "TT Ramillas Trial Medium", "Source Sans Pro", Helvetica, sans-serif;
 		font-weight: 600;
 		font-size: 1rem;
 		line-height: 1.65;
-		font-style: italic
+		letter-spacing: 0.01em;
+		
+		/* font-style: italic */
 	}
 
 	a {
@@ -195,7 +219,9 @@ input, select, textarea {
 			}
 
 	strong, b {
-		font-weight: 600;
+		font-weight: 900;
+		font-family: "TT Ramillas Trial Black";
+
 	}
 
 	em, i {
@@ -204,13 +230,17 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2rem 0;
+		line-height: 2;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
+		font-family: "TT Ramillas Trial Medium", "Source Sans Pro", Helvetica, sans-serif;
 		font-weight: 900;
 		line-height: 1.5;
-		margin: 0 0 1rem 0;
+		margin: 1rem 0;
 		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-style:italic
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -219,9 +249,10 @@ input, select, textarea {
 		}
 
 	h1 {
-		font-size: 3.25rem;
+		font-size: 4.25rem;
 		line-height: .25;
 		margin: 0 0 1rem 0;
+		font-family: "TT Ramillas Trial Black Decor";
 	}
 
 	h2 {
@@ -237,10 +268,13 @@ input, select, textarea {
 
 	h4 {
 		font-size: 1.25rem;
+		font-style: normal;
 	}
 
 	h5 {
 		font-size: 0.9rem;
+		letter-spacing: 0.05em;
+		max-width: 50%;
 	}
 
 	h6 {
@@ -2742,10 +2776,12 @@ input, select, textarea {
 		}
 
 	ul {
-		list-style: disc;
-		margin: 0 0 2rem 0;
+		list-style-type: none;
+		/* margin: 0 0 2rem 0; */
 		padding-left: 1rem;
 	}
+
+	
 
 		ul li {
 			padding-left: 0.5rem;
@@ -2758,13 +2794,32 @@ input, select, textarea {
 
 			ul.alt li {
 				border-top: solid 1px;
-				padding: 0.5rem 0;
+				padding: 0.25rem .75rem;
 			}
+			  
+			  ul.award > li::before {
+				content: "✦"; /* Use the custom bullet character */
+				margin-right: 0.5em; /* Add space between the bullet and text */
+			  }
+			  
+			  ul.award > li::after {
+				content: ''; /* Empty content for the underline */
+				display: block;
+				width: 0;
+				height: 2px; /* Adjust the underline height as needed */
+				background-image: linear-gradient(90deg, #a2cedc, #aa8fff); /* Initial underline color */
+				transition: width 0.8s; /* Add a transition for smooth animation */
+			  }
+			  
+			  ul.award > li:hover::after {
+				width: 100%; /* Increase the width to create the transition effect */
+			  }
 
 				ul.alt li:first-child {
 					border-top: 0;
 					padding-top: 0;
 				}
+		
 
 	dl {
 		margin: 0 0 2rem 0;
@@ -2781,7 +2836,8 @@ input, select, textarea {
 		}
 
 	ul.alt li {
-		border-top-color: #dde1eb;
+		border-style: hidden;
+		padding-top: 1rem;
 	}
 
 /* Actions */
@@ -3171,7 +3227,7 @@ input, select, textarea {
 			color: #ffffff;
 		}
 		.banner h5 {
-			font-family: "Source Sans Pro", Helvetica, sans-serif;
+			font-family: 'TT Ramillas Trial Medium', "Source Sans Pro", Helvetica, sans-serif;
 			text-transform:none;
 			font-weight: 400;
 		}
@@ -3353,15 +3409,12 @@ input, select, textarea {
 		-ms-align-items: -ms-stretch;
 		align-items: stretch;
 		text-align: center;
-		font-style: italic;
+		overflow: hidden;
+		/* font-style: italic; */
 	}
 
-	.test-big{
-		font-size:larger;
-	}
-
-	.test-small{
-		font-size: smaller;
+	p{
+		font-size: 0.9rem;
 	}
 
 		.features > * {
@@ -3397,7 +3450,7 @@ input, select, textarea {
 			}
 
 			.features > section:nth-child(3n - 2) {
-				border-left-width: 0;
+				border-left-width: 1px;
 			}
 
 			.features > section:nth-child(-n + 3) {
@@ -3467,7 +3520,7 @@ input, select, textarea {
 
 		}
 		@media (max-width: 767px) {
-			section.mobile-hide {
+			.mobile-hide {
 			  display: none; 
 			}
 		}
@@ -3476,7 +3529,7 @@ input, select, textarea {
 			.desktop-hide {
 			  display: none; 
 			}
-		  }
+		}
 
 	.features > section {
 		border-color: #dde1eb;
@@ -3818,7 +3871,7 @@ input, select, textarea {
 	.main {
 		position: relative;
 		background-color: #ffffff;
-		overflow-x: hidden;
+		overflow: hidden;
 	}
 
 		.main > * {
