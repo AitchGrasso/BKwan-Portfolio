@@ -80,6 +80,12 @@ input, select, textarea {
   }
 
   @font-face {
+	font-family: "TT Ramillas Trial ExtraLight Italic";  /* Choose a name for your font */
+	src: url('../webfonts/TT Ramillas Trial ExtraLight Italic.ttf') format('truetype'); /* Path to your .ttf file */
+	/* You can also include other font formats (e.g., woff, woff2, eot) for cross-browser compatibility */
+  }
+
+  @font-face {
 	font-family: "TT Ramillas Trial Light Italic";  /* Choose a name for your font */
 	src: url('../webfonts/TT Ramillas Trial Light Italic.ttf') format('truetype'); /* Path to your .ttf file */
 	/* You can also include other font formats (e.g., woff, woff2, eot) for cross-browser compatibility */
@@ -3485,8 +3491,17 @@ input, select, textarea {
 				border-left-width: 0;
 			}
 
+			.features > section:nth-child(2n) {
+				border-right-width: 0;
+				border-right-width: 1px; 
+			}
+
 			.features > section:nth-child(-n + 2) {
 				border-top-width: 0;
+			}
+			.features > *:last-child {
+				width: 100%;
+				border-left-width: 1px; 
 			}
 
 		}
@@ -3516,6 +3531,9 @@ input, select, textarea {
 
 			.features > section:nth-child(-n + 1) {
 				border-top-width: 0;
+			}
+			.features > *:last-child {
+				width: 100%; /* Set the last child to take up the full width */
 			}
 
 		}
