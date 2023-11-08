@@ -74,14 +74,14 @@ input, select, textarea {
   }
 
   @font-face {
-	font-family: "TT Ramillas Trial Bold Italic";  /* Choose a name for your font */
-	src: url('../webfonts/TT Ramillas Trial Bold Italic.ttf') format('truetype'); /* Path to your .ttf file */
+	font-family: "TT Ramillas Trial Black Italic";  /* Choose a name for your font */
+	src: url('../webfonts/TT Ramillas Trial Black Italic.ttf') format('truetype'); /* Path to your .ttf file */
 	/* You can also include other font formats (e.g., woff, woff2, eot) for cross-browser compatibility */
   }
 
   @font-face {
-	font-family: "TT Ramillas Trial Black Decor";  /* Choose a name for your font */
-	src: url('../webfonts/TT Ramillas Trial Black Decor.ttf') format('truetype'); /* Path to your .ttf file */
+	font-family: "TT Ramillas Trial Italic";  /* Choose a name for your font */
+	src: url('../webfonts/TT Ramillas Trial Italic.ttf') format('truetype'); /* Path to your .ttf file */
 	/* You can also include other font formats (e.g., woff, woff2, eot) for cross-browser compatibility */
   }
 
@@ -185,7 +185,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: "TT Ramillas Trial Bold Italic", "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "TT Ramillas Trial Italic", "Source Sans Pro", Helvetica, sans-serif;
 		font-weight: 600;
 		font-size: 1rem;
 		line-height: 1.65;
@@ -252,7 +252,7 @@ input, select, textarea {
 		font-size: 4.25rem;
 		line-height: .25;
 		margin: 0 0 1rem 0;
-		font-family: "TT Ramillas Trial Bold Italic", "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "TT Ramillas Trial Black Italic", "Source Sans Pro", Helvetica, sans-serif;
 	}
 
 	h2 {
