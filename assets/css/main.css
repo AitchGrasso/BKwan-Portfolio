@@ -257,7 +257,7 @@ input, select, textarea {
 	h1 {
 		font-size: 4.25rem;
 		line-height: .25;
-		margin: 0 0 1rem 0;
+		margin: 0 0 0 0;
 		font-family: "TT Ramillas Trial Black Italic", "Source Sans Pro", Helvetica, sans-serif;
 	}
 
@@ -281,17 +281,24 @@ input, select, textarea {
 		font-size: 0.9rem;
 		letter-spacing: 0.05em;
 		max-width: 50%;
+		margin: 1.5rem 0;
 	}
 
 	h6 {
 		font-size: 0.7rem;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 1024px) {
+		h1{
+			font-size: 2.5rem;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
 
 		h1 {
-			font-size: 2rem;
-			margin: 0 0 1.5rem 0;
+			font-size: 3rem;
+			margin: 0 0;
 		}
 
 		h2 {
@@ -307,6 +314,10 @@ input, select, textarea {
 		h4 {
 			font-size: 1rem;
 		}
+		h5{
+			margin: 1rem 0;
+			font-size: 1rem;
+		}
 
 	}
 
@@ -314,6 +325,15 @@ input, select, textarea {
 
 		h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
 			display: none;
+		}
+
+		h1{
+			font-size: 1.5rem;
+		}
+
+		h5{
+			margin: 1rem 0;
+			font-size: .7rem;
 		}
 
 	}
@@ -3381,7 +3401,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 360px) {
 
 			.banner {
 				padding: 10rem 1.5rem 8rem 1.5rem ;

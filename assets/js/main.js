@@ -1,9 +1,3 @@
-/*
-	Vortex by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-*/
-
 (function($) {
 
 	var	$window = $(window),
@@ -26,29 +20,6 @@
 				$body.removeClass('is-preload');
 			}, 1000);
 		});
-
-		// var options = {
-		// 	root: null, // Use the viewport as the root
-		// 	rootMargin: '0px',
-		// 	threshold: 0.5 // Trigger when 50% of the section is in the viewport
-		//   };
-
-		//   var observer = new IntersectionObserver(function (entries, observer) {
-		// 	entries.forEach(function (entry) {
-		// 	  if (entry.isIntersecting) {
-		// 		// Add a class to start the animation
-		// 		$body.addClass('is-section-visible');
-				
-		// 		// Once the animation is triggered, you may want to disconnect the observer to avoid re-triggering
-		// 		observer.disconnect();
-		// 	  }
-		// 	});
-		//   }, options);
-		
-		//   // Start observing the section
-		//   observer.observe(document.getElementById('animated-section'));
-		// });
-	
 
 	// Tweaks/fixes.
 
@@ -74,7 +45,33 @@
 				});
 
 			}
+	
+	// Image Slider
+    var customImageSlider = $('.custom-image-slider'),
+        currentIndex = 0;
 
+    function showImage(index) {
+        var translateValue = -index * 100 + "%";
+        customImageSlider.css('transform', 'translateX(' + translateValue + ')');
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % customImageSlider.children.length;
+        showImage(currentIndex);
+    }
+
+    // Change slide every 3 seconds (adjust as needed)
+    var sliderInterval = setInterval(nextImage, 3000);
+
+    // Optional: Pause on hover
+    customImageSlider.on('mouseenter', function () {
+        clearInterval(sliderInterval);
+    });
+
+    customImageSlider.on('mouseleave', function () {
+        sliderInterval = setInterval(nextImage, 3000);
+    });
+	
 	// Dropdowns.
 		$('#nav > ul').dropotron({
 			alignment: 'right',
