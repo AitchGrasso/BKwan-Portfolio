@@ -100,3 +100,14 @@
 				});
 
 })(jQuery);
+
+function toggleAccordion(row) {
+	var content = row.nextElementSibling;
+  
+	// Toggle the visibility of the content row
+	if (content.style.display === "table-row") {
+	  content.style.display = "none";
+	} else {
+	  content.style.display = "table-row";
+	}
+  }

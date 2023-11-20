@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Bensen Kwan - Calendar</title>
+		<meta name="description" content="View Bensen's calendar to see his upcoming performances and a recap of his repertoire.">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -36,7 +37,7 @@
 				
 					<section class="main style1">
 						<header class="small">
-							<h1>Calendar</h1>
+							<h2>Calendar</h2>
 							<p>Explore Bensen's calendar to see his upcoming performances and a recap of his past repertoire. Get a sense of his musical journey, from what he's performed before to what's coming next.</p>
 						</header>
 						<div class="image" data-position="25% 25%">
@@ -51,18 +52,24 @@
 													<tr>
 														<th></th>
 														<th></th>
+														<th></th>
 														
 													</tr>
 												</thead>
 												<tbody>
-													<tr>
+													<tr onclick="toggleAccordion(this)">
 														<td>01.22</td>
 														<td>Philadelphia Freedom Band</td>
 														<td></td>
 													</tr>
+													<tr class="content">
+														<td colspan="3">
+														  <p>Additional details for Philadelphia Freedom Band go here.</p>
+														</td>
+													</tr>
 													<tr>
 														<td>03.03
-															<br>03.04</td>
+														<br>03.04</td>
 														<td>University of Delaware - Concerto Debut of Prism Rhapsody by Keiko Abe</td>
 														<td></td>
 													</tr>
