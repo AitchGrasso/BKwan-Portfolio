@@ -18,7 +18,7 @@
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
-			}, 1000);
+			}, 1);
 		});
 
 	// Tweaks/fixes.
